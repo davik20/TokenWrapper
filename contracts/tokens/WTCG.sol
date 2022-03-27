@@ -30,6 +30,7 @@ contract WTCG is ERC20, IERC20Mintable, Ownable {
         _burn(_from, _amount);
     }
 
+    // set allowed minter to wrapper contract address
     function setAllowedMinter(address _minterAddress) public onlyOwner {
         allowedMinter = _minterAddress;
     }
